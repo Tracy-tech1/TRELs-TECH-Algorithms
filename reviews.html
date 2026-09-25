@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Reviews & Feedback | TRELs-TECH Algorithms</title>
+<meta name="description" content="Read client reviews and share feedback, complaints or recommendations with TRELs-TECH Algorithms.">
+<meta name="theme-color" content="#0B1220">
+<meta property="og:title" content="Client Reviews & Feedback | TRELs-TECH Algorithms">
+<meta property="og:description" content="Read client reviews and share feedback, complaints or recommendations with TRELs-TECH Algorithms.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-image.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg-grid" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="TRELs-TECH Algorithms home">
+      <img src="assets/img/emblem.svg" alt="" width="40" height="40">
+      <span>TRELs-TECH<small>ALGORITHMS</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="purchase.html">Purchase</a></li><li><a href="reviews.html" aria-current="page">Reviews</a></li><li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" data-wa href="#" style="color:#051019">Free demo</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Reviews</div>
+    <span class="eyebrow">Client voice</span>
+    <h1>Reviews, feedback <span class="grad-text">&amp; recommendations.</span></h1>
+    <p class="lead">Every message here makes us better. Share a review, tell us what went wrong, or recommend what we should build next.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="grid g-3" id="review-list"></div>
+  </div>
+</section>
+
+<section class="band" id="feedback">
+  <div class="container split" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">Your feedback</span>
+      <h2>Tell us how we did.</h2>
+      <p>Choose the type of feedback. Reviews may be shown on this page if you give permission. Complaints are private and go straight to our team — we reply within two working days.</p>
+      <ul class="ticks">
+        <li><b style="color:var(--text)">Review</b> — share your experience working with us.</li>
+        <li><b style="color:var(--text)">Complaint</b> — something wasn't right. We'll fix it.</li>
+        <li><b style="color:var(--text)">Recommendation</b> — ideas for new services, tools or improvements.</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <form class="form" name="feedback" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="feedback">
+        <p class="hidden"><label>Don't fill this in: <input name="bot-field"></label></p>
+        <div class="field">
+          <label>Type of feedback *</label>
+          <div class="seg">
+            <input type="radio" id="t-review" name="feedback_type" value="Review" checked><label for="t-review">Review</label>
+            <input type="radio" id="t-complaint" name="feedback_type" value="Complaint"><label for="t-complaint">Complaint</label>
+            <input type="radio" id="t-rec" name="feedback_type" value="Recommendation"><label for="t-rec">Recommendation</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="r-name">Your name *</label><input id="r-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="r-business">Business / role <span class="opt">(optional)</span></label><input id="r-business" name="business" placeholder="e.g. Salon owner, Buea"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="r-email">Email *</label><input id="r-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="r-service">Service used</label>
+            <select id="r-service" name="service">
+              <option value="">Select…</option>
+              <option>Web development</option><option>AI chatbot</option><option>Automation</option>
+              <option>AI consulting</option><option>AI film</option><option>Ready-made website</option><option>Ready-made chatbot</option><option>Not a client yet</option>
+            </select></div>
+        </div>
+        <div class="field" id="rating-field">
+          <label>Rating</label>
+          <div class="stars" role="radiogroup" aria-label="Rating out of 5">
+            <input type="radio" id="s5" name="rating" value="5"><label for="s5" title="5 stars">★</label>
+            <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 stars">★</label>
+            <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 stars">★</label>
+            <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 stars">★</label>
+            <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 star">★</label>
+          </div>
+        </div>
+        <div class="field"><label for="r-msg" id="msg-label">Your review *</label><textarea id="r-msg" name="message" required></textarea></div>
+        <div class="field" id="consent-field">
+          <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted)"><input type="checkbox" name="publish_permission" value="yes" style="width:auto;margin-top:5px"> TRELs-TECH may publish this review on its website with my first name and business type.</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Send feedback</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/emblem.svg" alt="" width="40" height="40"><span>TRELs-TECH<small>ALGORITHMS</small></span></a>
+        <p style="margin-top:14px;max-width:320px;font-size:.93rem">Websites, AI automation and AI films for businesses in Cameroon and worldwide. Websites that sell. Bots that reply.</p>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="purchase.html">Ready-made products</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div><h4>Projects</h4><ul>
+        <li><a href="projects/web-development.html">Web development</a></li>
+        <li><a href="projects/ai-automation.html">AI consulting &amp; automation</a></li>
+        <li><a href="projects/ai-film.html">AI film making</a></li>
+        <li><a href="contact.html#policies">Policies</a></li>
+      </ul></div>
+      <div><h4>Follow</h4><ul data-socials data-list></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> TRELs-TECH Algorithms. All rights reserved.</span>
+      <span data-location></span>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" data-wa href="#" aria-label="Chat with us on WhatsApp"><span data-icon="wa"></span></a>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

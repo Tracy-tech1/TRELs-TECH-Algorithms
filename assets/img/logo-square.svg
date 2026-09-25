@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+    <stop offset="0" stop-color="#132441"/><stop offset=".55" stop-color="#0B1220"/><stop offset="1" stop-color="#060A13"/>
+  </radialGradient>
+  <linearGradient id="ring" gradientUnits="userSpaceOnUse" x1="200" y1="180" x2="880" y2="900">
+    <stop offset="0" stop-color="#00D1FF"/><stop offset=".5" stop-color="#3B82F6"/><stop offset="1" stop-color="#2EE59D"/>
+  </linearGradient>
+  <linearGradient id="tface" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFEFFF"/>
+  </linearGradient>
+  <linearGradient id="tside" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0891B2"/><stop offset="1" stop-color="#0B3A5C"/>
+  </linearGradient>
+  <linearGradient id="tree" gradientUnits="userSpaceOnUse" x1="0" y1="616" x2="0" y2="790">
+    <stop offset="0" stop-color="#00D1FF"/><stop offset="1" stop-color="#2EE59D"/>
+  </linearGradient>
+  <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+    <circle cx="18" cy="18" r="1.6" fill="#64748B" fill-opacity=".35"/>
+  </pattern>
+  <radialGradient id="dotfade" cx="50%" cy="50%" r="50%">
+    <stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="dm"><rect width="1080" height="1080" fill="url(#dotfade)"/></mask>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="22"/>
+  </filter>
+</defs>
+
+<rect width="1080" height="1080" fill="url(#bg)"/>
+<rect width="1080" height="1080" fill="url(#dots)" mask="url(#dm)"/>
+
+<!-- halo behind emblem -->
+<circle cx="540" cy="540" r="250" fill="#00D1FF" opacity=".10" filter="url(#softglow)"/>
+
+<!-- orbit -->
+<g transform="rotate(-24 540 540)">
+  <ellipse cx="540" cy="540" rx="455" ry="150" fill="none" stroke="url(#ring)" stroke-width="3" stroke-opacity=".55" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <circle cx="995" cy="540" r="11" fill="#00D1FF" filter="url(#glow)"/>
+</g>
+
+<!-- chip hexagon: outer + inner -->
+<polygon points="540,180 851.8,360 851.8,720 540,900 228.2,720 228.2,360" fill="#0B1220" fill-opacity=".55" stroke="url(#ring)" stroke-width="10" stroke-linejoin="round"/>
+<polygon points="540,214 822.3,377 822.3,703 540,866 257.7,703 257.7,377" fill="none" stroke="#64748B" stroke-opacity=".45" stroke-width="2.5" stroke-dasharray="26 10"/>
+
+<!-- chip pins right / left -->
+<g stroke="url(#ring)" stroke-width="7" stroke-linecap="round">
+  <path d="M852 450 H902"/><path d="M852 510 H922"/><path d="M852 570 H922"/><path d="M852 630 H902"/>
+  <path d="M228 450 H178"/><path d="M228 510 H158"/><path d="M228 570 H158"/><path d="M228 630 H178"/>
+</g>
+<g fill="#0B1220" stroke="#00D1FF" stroke-width="5">
+  <circle cx="910" cy="450" r="9"/><circle cx="930" cy="510" r="9"/><circle cx="930" cy="570" r="9"/><circle cx="910" cy="630" r="9"/>
+</g>
+<g fill="#0B1220" stroke="#2EE59D" stroke-width="5">
+  <circle cx="170" cy="450" r="9"/><circle cx="150" cy="510" r="9"/><circle cx="150" cy="570" r="9"/><circle cx="170" cy="630" r="9"/>
+</g>
+
+<!-- T: extruded depth -->
+<g transform="translate(14 14)" fill="url(#tside)">
+  <rect x="352" y="352" width="376" height="84" rx="14"/>
+  <rect x="498" y="420" width="84" height="196" rx="14"/>
+</g>
+<!-- T: face -->
+<g fill="url(#tface)">
+  <rect x="352" y="352" width="376" height="84" rx="14"/>
+  <rect x="498" y="420" width="84" height="196" rx="14"/>
+</g>
+<!-- data-bus lanes cut into crossbar & stem -->
+<g stroke="#0B1220" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
+  <path d="M388 380 H470 L486 396 H700"/>
+  <path d="M388 410 H452"/>
+  <path d="M612 410 H692"/>
+  <path d="M540 396 V580"/>
+</g>
+<g fill="#0B1220"><circle cx="388" cy="380" r="7"/><circle cx="388" cy="410" r="7"/><circle cx="700" cy="396" r="7"/><circle cx="692" cy="410" r="7"/></g>
+
+<!-- signal port on crossbar right -->
+<path d="M728 394 H772" stroke="#00D1FF" stroke-width="10" stroke-linecap="round"/>
+<circle cx="790" cy="394" r="22" fill="#00D1FF" filter="url(#glow)"/>
+<circle cx="790" cy="394" r="8" fill="#E0FAFF"/>
+<!-- input port on crossbar left -->
+<path d="M352 394 H308" stroke="#2EE59D" stroke-width="10" stroke-linecap="round"/>
+<rect x="276" y="378" width="32" height="32" rx="6" fill="#0B1220" stroke="#2EE59D" stroke-width="7"/>
+
+<!-- algorithm tree from stem -->
+<g stroke="url(#tree)" stroke-width="9" stroke-linecap="round" fill="none">
+  <path d="M540 616 V660"/>
+  <path d="M540 660 L452 726"/><path d="M540 660 V752"/><path d="M540 660 L628 726"/>
+  <path d="M452 726 L420 780"/><path d="M452 726 L484 780"/>
+  <path d="M628 726 L596 780"/><path d="M628 726 L660 780"/>
+</g>
+<circle cx="540" cy="660" r="15" fill="#00D1FF" filter="url(#glow)"/>
+<g fill="#0B1220" stroke="#2EE59D" stroke-width="6">
+  <circle cx="452" cy="726" r="11"/><circle cx="628" cy="726" r="11"/>
+</g>
+<g fill="#2EE59D" filter="url(#glow)">
+  <circle cx="540" cy="760" r="13"/>
+  <circle cx="420" cy="786" r="9"/><circle cx="484" cy="786" r="9"/><circle cx="596" cy="786" r="9"/><circle cx="660" cy="786" r="9"/>
+</g>
+
+</svg>

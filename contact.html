@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact & Policies | TRELs-TECH Algorithms</title>
+<meta name="description" content="Contact TRELs-TECH Algorithms on WhatsApp, email or social media, send an inquiry, and read our policies.">
+<meta name="theme-color" content="#0B1220">
+<meta property="og:title" content="Contact & Policies | TRELs-TECH Algorithms">
+<meta property="og:description" content="Contact TRELs-TECH Algorithms on WhatsApp, email or social media, send an inquiry, and read our policies.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-image.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg-grid" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="TRELs-TECH Algorithms home">
+      <img src="assets/img/emblem.svg" alt="" width="40" height="40">
+      <span>TRELs-TECH<small>ALGORITHMS</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="purchase.html">Purchase</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" data-wa href="#" style="color:#051019">Free demo</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    <span class="eyebrow">Contact us</span>
+    <h1>Let's talk about <span class="grad-text">your project.</span></h1>
+    <p class="lead">Message us on WhatsApp for the fastest reply, or send an inquiry below and we'll get back to you within one working day.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="container contact-grid">
+    <aside class="card reveal">
+      <h3>Contact details</h3>
+      <ul class="info-list" style="margin:18px 0 26px">
+        <li><span class="icon-box green"><span data-icon="wa"></span></span><div><b>WhatsApp</b><a data-wa href="#"><span data-wa-display></span></a></div></li>
+        <li><span class="icon-box"><span data-icon="mail"></span></span><div><b>Email</b><a data-email href="#"></a></div></li>
+        <li><span class="icon-box violet"><span data-icon="pin"></span></span><div><b>Location</b><span data-location></span></div></li>
+        <li><span class="icon-box amber"><span data-icon="clock"></span></span><div><b>Hours</b><span data-hours></span></div></li>
+      </ul>
+      <h3 style="font-size:1.05rem">Find us on</h3>
+      <div class="socials" data-socials style="margin-top:12px"></div>
+      <a class="btn btn-wa btn-block" data-wa href="#" style="margin-top:26px"><span data-icon="wa" style="width:20px;height:20px;display:inline-flex"></span>Chat on WhatsApp</a>
+    </aside>
+
+    <div class="card reveal">
+      <h3>Send an inquiry</h3>
+      <p>Questions, quotes or project ideas — tell us everything.</p>
+      <form class="form" name="inquiry" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="inquiry">
+        <p class="hidden"><label>Don't fill this in: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="business">Business / organisation <span class="opt">(optional)</span></label><input id="business" name="business" autocomplete="organization"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">WhatsApp number <span class="opt">(optional)</span></label><input id="phone" name="whatsapp" type="tel" autocomplete="tel" placeholder="+237 …"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="service">Service *</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service…</option>
+              <option>Web development</option>
+              <option>AI consulting &amp; chatbots</option>
+              <option>Automations</option>
+              <option>AI film making</option>
+              <option>Ready-made website or chatbot</option>
+              <option>Something else</option>
+            </select></div>
+          <div class="field"><label for="budget">Budget <span class="opt">(optional)</span></label>
+            <select id="budget" name="budget">
+              <option value="">Select a range…</option>
+              <option>Under 50,000 FCFA</option>
+              <option>50,000 – 150,000 FCFA</option>
+              <option>150,000 – 400,000 FCFA</option>
+              <option>Over 400,000 FCFA</option>
+              <option>Not sure yet</option>
+            </select></div>
+        </div>
+        <div class="field"><label for="message">Your question or project details *</label><textarea id="message" name="message" required placeholder="What do you need, and by when?"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send inquiry</button>
+        <p class="form-note">By sending, you agree we may contact you about your inquiry. We never share your details.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="policies" class="band">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Company policies</span>
+      <h2>Clear terms, so you can buy with confidence.</h2>
+      <p>These policies apply to every client and every purchase.</p>
+    </div>
+    <div class="grid g-2">
+      <article class="card policy reveal">
+        <div class="big grad-text">50%</div>
+        <h3>Refundable deposit on private contracts</h3>
+        <p>All private contracts — custom websites, chatbots, automations, consulting and films — start with a <b style="color:var(--text)">50% deposit</b>. The deposit is refundable.</p>
+        <ul>
+          <li>Work begins once the deposit is received and confirmed.</li>
+          <li>The scope, price and timeline are agreed in writing before you pay.</li>
+          <li>Request a deposit refund by WhatsApp or email.</li>
+        </ul>
+      </article>
+      <article class="card policy green reveal">
+        <div class="big" style="color:var(--green)">100%</div>
+        <h3>Refund on purchased tools before customisation</h3>
+        <p>Every ready-made website and chatbot bought from our <a href="purchase.html">Purchase page</a> is <b style="color:var(--text)">100% refundable</b>, as long as the refund is requested <b style="color:var(--text)">before customisation begins</b>.</p>
+        <ul>
+          <li>We confirm by message when customisation starts.</li>
+          <li>Refunds go back through the payment method you used.</li>
+          <li>Request a refund by WhatsApp or email with your order details.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="form-note reveal" style="margin-top:22px">Questions about a policy? <a data-wa href="#">Message us on WhatsApp</a> or email <a data-email href="#"></a>.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/emblem.svg" alt="" width="40" height="40"><span>TRELs-TECH<small>ALGORITHMS</small></span></a>
+        <p style="margin-top:14px;max-width:320px;font-size:.93rem">Websites, AI automation and AI films for businesses in Cameroon and worldwide. Websites that sell. Bots that reply.</p>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="purchase.html">Ready-made products</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div><h4>Projects</h4><ul>
+        <li><a href="projects/web-development.html">Web development</a></li>
+        <li><a href="projects/ai-automation.html">AI consulting &amp; automation</a></li>
+        <li><a href="projects/ai-film.html">AI film making</a></li>
+        <li><a href="contact.html#policies">Policies</a></li>
+      </ul></div>
+      <div><h4>Follow</h4><ul data-socials data-list></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> TRELs-TECH Algorithms. All rights reserved.</span>
+      <span data-location></span>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" data-wa href="#" aria-label="Chat with us on WhatsApp"><span data-icon="wa"></span></a>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
